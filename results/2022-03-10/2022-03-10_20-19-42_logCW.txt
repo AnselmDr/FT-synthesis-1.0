@@ -1,0 +1,67 @@
+Iteration     Residual     Step size  Jacobian: Full
+   0          1.6520e-05
+   1          1.6556e-06   1.0000000
+   2          7.4574e-08   1.0000000
+
+ans = 
+
+  <a href="matlab:helpPopup pde.StationaryResults" style="font-weight:bold">StationaryResults</a> with properties:
+
+    NodalSolution: [89×57 double]
+       XGradients: [89×57 double]
+       YGradients: [89×57 double]
+       ZGradients: [0×57 double]
+             Mesh: [1×1 FEMesh]
+
+{Unrecognized function or variable 'export_fig'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('stationary_oneDimRct/plotInterp', 'C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\FT-synthesis 1.0\stationary_oneDimRct.m', 1065)" style="font-weight:bold">stationary_oneDimRct/plotInterp</a> (<a href="matlab: opentoline('C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\FT-synthesis 1.0\stationary_oneDimRct.m',1065,0)">line 1065</a>)
+                export_fig(filename,'-m4');
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Executable', 'C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\FT-synthesis 1.0\Executable.m', 147)" style="font-weight:bold">Executable</a> (<a href="matlab: opentoline('C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\FT-synthesis 1.0\Executable.m',147,0)">line 147</a>)
+rctPDE.plotInterp('save', true);
+} 
+reset(groot);
+set(groot,'DefaultFigurePosition',get(0,'screensize').*[1 1 0.5 0.5])
+set(groot,'DefaultFigureColor','w');
+set(groot,'DefaultAxesYGrid', 'on', 'DefaultAxesXGrid', 'off')
+set(groot,'DefaultAxesGridLineStyle','--')
+set(groot,'DefaultAxesFontSize',14)
+
+% Show results via class functions and save plots
+warning('off', 'MATLAB:handle_graphics:exceptions:SceneNode')% Font of mole flow ylabel in plotInterp is not supported and produces a lot of unnecessary warnings
+rctPDE.plotInterp('save', true);
+{Unrecognized function or variable 'export_fig'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('stationary_oneDimRct/plotInterp', 'C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\FT-synthesis 1.0\stationary_oneDimRct.m', 1065)" style="font-weight:bold">stationary_oneDimRct/plotInterp</a> (<a href="matlab: opentoline('C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\FT-synthesis 1.0\stationary_oneDimRct.m',1065,0)">line 1065</a>)
+                export_fig(filename,'-m4');
+} 
+addpath('export_fig');
+reset(groot);
+set(groot,'DefaultFigurePosition',get(0,'screensize').*[1 1 0.5 0.5])
+set(groot,'DefaultFigureColor','w');
+set(groot,'DefaultAxesYGrid', 'on', 'DefaultAxesXGrid', 'off')
+set(groot,'DefaultAxesGridLineStyle','--')
+set(groot,'DefaultAxesFontSize',14)
+
+% Show results via class functions and save plots
+warning('off', 'MATLAB:handle_graphics:exceptions:SceneNode')% Font of mole flow ylabel in plotInterp is not supported and produces a lot of unnecessary warnings
+rctPDE.plotInterp('save', true);
+rctPDE.showResultFT('save', true);
+    0.6907
+
+    0.6863
+
+rctPDE.plotReactor('save', true);
+rctPDE.computationTime = toc;
+disp(strcat("Solution time is ", num2str(toc), " s."));
+Solution time is 729.6123 s.
+
+% save executable file
+copyfile('Executable.m',strcat('results/',rctPDE.sDate,'/',rctPDE.sDateTime, '_rct_exec.m'));
+
+% save case
+filename = strcat('results/',rctPDE.sDate,'/',rctPDE.sDateTime, '_rctPDE.mat');
+save(filename, 'rctPDE');
+
+diary off

@@ -7,6 +7,7 @@ tic
 addpath('Laws\Rate Laws'); % Rate Laws folder
 addpath('Laws\Heat Transfer Laws'); % Rate Laws folder
 addpath('matDataX');
+addpath('export_fig');
 
 %% Initializing values
 % Parameters rarely changed by parameter study
