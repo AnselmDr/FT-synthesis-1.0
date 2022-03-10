@@ -1,0 +1,35 @@
+Iteration     Residual     Step size  Jacobian: Full
+   0          1.6520e-05
+   1          1.6556e-06   1.0000000
+   2          7.4574e-08   1.0000000
+
+ans = 
+
+  <a href="matlab:helpPopup pde.StationaryResults" style="font-weight:bold">StationaryResults</a> with properties:
+
+    NodalSolution: [89×57 double]
+       XGradients: [89×57 double]
+       YGradients: [89×57 double]
+       ZGradients: [0×57 double]
+             Mesh: [1×1 FEMesh]
+
+    0.6907
+
+    0.6863
+
+Solution time is 504.4124 s.
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('copyfile')" style="font-weight:bold">copyfile</a>
+No matching files were found.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Executable', 'C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\Executable.m', 154)" style="font-weight:bold">Executable</a> (<a href="matlab: opentoline('C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\Executable.m',154,0)">line 154</a>)
+copyfile('stationary_exec.m',strcat('results/',rctPDE.sDate,'/',rctPDE.sDateTime, '_rct_exec.m'));
+} 
+opentoline('C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\Executable.m',154,0)
+% save executable file
+copyfile('Executable.m',strcat('results/',rctPDE.sDate,'/',rctPDE.sDateTime, '_rct_exec.m'));
+
+% save case
+filename = strcat('results/',rctPDE.sDate,'/',rctPDE.sDateTime, '_rctPDE.mat');
+save(filename, 'rctPDE');
+
+diary off

@@ -1,0 +1,39 @@
+Iteration     Residual     Step size  Jacobian: Full
+   0          1.6520e-05
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('MIXTURE/thermCond', 'C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\matDataX\MIXTURE.m', 378)" style="font-weight:bold">MIXTURE/thermCond</a> (<a href="matlab: opentoline('C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\matDataX\MIXTURE.m',378,0)">line 378</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('stationary_oneDimRct/thermCondGas', 'C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\stationary_oneDimRct.m', 527)" style="font-weight:bold">stationary_oneDimRct/thermCondGas</a> (<a href="matlab: opentoline('C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\stationary_oneDimRct.m',527,0)">line 527</a>)
+            lambdaRct = obj.gasPhase.thermCond('p', pLambda, 'T', T, 'y', gasPhaseComposition);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('coeff_c', 'C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\coeff_c.m', 47)" style="font-weight:bold">coeff_c</a> (<a href="matlab: opentoline('C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\coeff_c.m',47,0)">line 47</a>)
+    lambdaRct = obj.thermCondGas(pCurr,TCurrRct,nCurr,nSum);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('stationary_oneDimRct>@(location,state)coeff_c(location,state,obj)', 'C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\stationary_oneDimRct.m', 659)" style="font-weight:bold">stationary_oneDimRct>@(location,state)coeff_c(location,state,obj)</a> (<a href="matlab: opentoline('C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\stationary_oneDimRct.m',659,0)">line 659</a>)
+                'c',@(location,state)coeff_c(location,state,obj),...
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pde.EquationModel/solveStationaryNonlinear>assemblePdeMatrices', 'G:\Programme G\MATLAB\toolbox\pde\+pde\@EquationModel\solveStationaryNonlinear.m', 106)" style="font-weight:bold">pde.EquationModel/solveStationaryNonlinear>assemblePdeMatrices</a> (<a href="matlab: opentoline('G:\Programme G\MATLAB\toolbox\pde\+pde\@EquationModel\solveStationaryNonlinear.m',106,0)">line 106</a>)
+    [K, F] = formGlobalKF2D(tempPde, p, t, coefstruct,u,[]);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pde.EquationModel/solveStationaryNonlinear>compResidual', 'G:\Programme G\MATLAB\toolbox\pde\+pde\@EquationModel\solveStationaryNonlinear.m', 125)" style="font-weight:bold">pde.EquationModel/solveStationaryNonlinear>compResidual</a> (<a href="matlab: opentoline('G:\Programme G\MATLAB\toolbox\pde\+pde\@EquationModel\solveStationaryNonlinear.m',125,0)">line 125</a>)
+[K, M, F, Q, G, H, R] = assemblePdeMatrices(pdenonTempPde, ndims, pdenonp, pdenont, pdenoncoef, u(1:pdenonn));
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pde.EquationModel/solveStationaryNonlinear>@(~,u)compResidual(u,self,p,t,coefstruct,np*N)', 'G:\Programme G\MATLAB\toolbox\pde\+pde\@EquationModel\solveStationaryNonlinear.m', 20)" style="font-weight:bold">pde.EquationModel/solveStationaryNonlinear>@(~,u)compResidual(u,self,p,t,coefstruct,np*N)</a> (<a href="matlab: opentoline('G:\Programme G\MATLAB\toolbox\pde\+pde\@EquationModel\solveStationaryNonlinear.m',20,0)">line 20</a>)
+numjac_fh=@(~,u)compResidual(u,self,p,t,coefstruct,np*N);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('numjac', 'G:\Programme G\MATLAB\toolbox\matlab\funfun\numjac.m', 187)" style="font-weight:bold">numjac</a> (<a href="matlab: opentoline('G:\Programme G\MATLAB\toolbox\matlab\funfun\numjac.m',187,0)">line 187</a>)
+          Fdel(:,j) = feval(F,t,ydel(:,j),args{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pde.EquationModel/solveStationaryNonlinear', 'G:\Programme G\MATLAB\toolbox\pde\+pde\@EquationModel\solveStationaryNonlinear.m', 61)" style="font-weight:bold">pde.EquationModel/solveStationaryNonlinear</a> (<a href="matlab: opentoline('G:\Programme G\MATLAB\toolbox\pde\+pde\@EquationModel\solveStationaryNonlinear.m',61,0)">line 61</a>)
+    [J,fac,G]=numjac(numjac_fh,0,u,r,thresh,fac,0,S,G);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pde.PDEModel/solvepde', 'G:\Programme G\MATLAB\toolbox\pde\+pde\@PDEModel\solvepde.m', 79)" style="font-weight:bold">pde.PDEModel/solvepde</a> (<a href="matlab: opentoline('G:\Programme G\MATLAB\toolbox\pde\+pde\@PDEModel\solvepde.m',79,0)">line 79</a>)
+        u = self.solveStationaryNonlinear(coefstruct, u0);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('stationary_oneDimRct/solve', 'C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\stationary_oneDimRct.m', 761)" style="font-weight:bold">stationary_oneDimRct/solve</a> (<a href="matlab: opentoline('C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\stationary_oneDimRct.m',761,0)">line 761</a>)
+            results = solvepde(obj.modelPDEsystem);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Executable', 'C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\Executable.m', 129)" style="font-weight:bold">Executable</a> (<a href="matlab: opentoline('C:\Users\Anselm\Dropbox\Uni_übergangsweise\Masterarbeit\Code\Neuer Ordner\Executable.m',129,0)">line 129</a>)
+rctPDE.solve
+} 
+Executable
